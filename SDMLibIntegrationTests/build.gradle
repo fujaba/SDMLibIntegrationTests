@@ -102,7 +102,7 @@ task integrate {
 integrate.dependsOn ':../../NetworkParser:test'
 integrate.dependsOn ':../../NetworkParser:buildCoreJar'
 integrate.dependsOn ':../../SDMLib:test'
-integrate.dependsOn ':../../SDMLib:sourceJar'
+integrate.dependsOn ':../../SDMLib:jar'
 integrate.dependsOn ':../../intergalacticspacetravels:test'
 integrate.dependsOn ':../../TTC2016SDMLibSolution:test'
 
