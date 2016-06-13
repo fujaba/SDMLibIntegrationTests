@@ -53,6 +53,10 @@ project(':../../SDMLib')
 {	
 	project.ext.set("useLocalDependencies", "true")
 	
+	def file = new File("build/libs")
+        file.mkdirs()
+	
+	
 	task integrate {
 		doLast {
 			
