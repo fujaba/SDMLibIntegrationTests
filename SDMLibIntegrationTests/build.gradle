@@ -39,6 +39,8 @@ dependencies {
 
 project(':../../NetworkParser')
 {
+	project.ext.set("latest", "true")
+	
 	task integrate {
 		doLast {
 			println 'networkparser is done'
@@ -52,6 +54,7 @@ project(':../../NetworkParser')
 project(':../../SDMLib')
 {	
 	project.ext.set("useLocalDependencies", "true")
+	project.ext.set("latest", "true")
 	
 	def file = new File("build/libs")
         file.mkdirs()
@@ -101,7 +104,7 @@ task integrate {
 
 integrate.dependsOn ':../../NetworkParser:test'
 integrate.dependsOn ':../../NetworkParser:buildCoreJar'
-integrate.dependsOn ':../../SDMLib:test'
+//integrate.dependsOn ':../../SDMLib:test'
 integrate.dependsOn ':../../SDMLib:jar'
 integrate.dependsOn ':../../intergalacticspacetravels:test'
 integrate.dependsOn ':../../TTC2016SDMLibSolution:test'
