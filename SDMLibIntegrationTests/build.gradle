@@ -62,20 +62,27 @@ project(':../../SDMLib')
 	
 	task integrate {
 		doLast {
-			
 			println 'sdmlib is done'
 		}
 	} 
 }
 
-
+project(':../../SDMLib-EMF')
+{	
+	project.ext.set("useLocalDependencies", "true")
+	
+	task integrate {
+		doLast {
+			println 'SDMLib-EMF is done'
+		}
+	} 
+}
 project(':../../TTC2016SDMLibSolution')
 {	
 	project.ext.set("useLocalDependencies", "true")
 	
 	task integrate {
 		doLast {
-			
 			println 'TTC2016SDMLibSolution is done'
 		}
 	} 
@@ -96,4 +103,5 @@ integrate.dependsOn ':../../NetworkParser:buildCoreJar'
 integrate.dependsOn ':../../SDMLib:test'
 integrate.dependsOn ':../../SDMLib:jar'
 integrate.dependsOn ':../../TTC2016SDMLibSolution:test'
+integrate.dependsOn ':../../SDMLib-EMF:test'
 
