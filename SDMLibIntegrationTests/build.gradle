@@ -95,7 +95,7 @@ task integrate {
 }
 
 integrate.dependsOn ':../../NetworkParser:test'
-integrate.dependsOn ':../../NetworkParser:buildCoreJar'
+integrate.dependsOn ':../../NetworkParser:buildCoreJar18'
 integrate.dependsOn ':../../SDMLib:test'
 integrate.dependsOn ':../../SDMLib:jar'
 integrate.dependsOn ':../../TTC2016SDMLibSolution:test'
